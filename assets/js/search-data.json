@@ -13,8 +13,8 @@
   
     
         ,"post1": {
-            "title": "Title",
-            "content": "score = [] scoresDict = {&quot;import&quot;:10, &quot;if&quot;:20, &quot;expression&quot;:30} for keys in scoresDict.keys(): answer1 = input(&quot;What command is used to include other functions that were previously developed?&quot;) if answer1 == &quot;import&quot;: score.append(scoresDict[&quot;import&quot;]) else: print(&quot;Incorrect!&quot;) answer2 = input(&quot;What command is used to evaluate correct or incorrect response in this example?&quot;) if answer2 == &quot;import&quot;: score.append(scoresDict[&quot;import&quot;]) else: print(&quot;Incorrect!&quot;) answer3 = input(&quot;What command is used to include other functions that were previously developed?&quot;) if answer3 == &quot;import&quot;: score.append(scoresDict[&quot;import&quot;]) else: print(&quot;Incorrect!&quot;) print(&quot;Your score is&quot;, sum(score)) . Incorrect! .",
+            "title": "Nathan's Magnificent Quiz",
+            "content": "score = [] scoresDict = {&quot;import&quot;:10, &quot;if&quot;:20, &quot;expression&quot;:30} for keys in scoresDict.keys(): answer1 = input(&quot;What command is used to include other functions that were previously developed?&quot;) if answer1 == &quot;import&quot;: score.append(scoresDict[&quot;import&quot;]) else: print(&quot;Incorrect!&quot;) answer2 = input(&quot;What command is used to evaluate correct or incorrect response in this example?&quot;) if answer2 == &quot;import&quot;: score.append(scoresDict[&quot;import&quot;]) else: print(&quot;Incorrect!&quot;) answer3 = input(&quot;What command is used to include other functions that were previously developed?&quot;) if answer3 == &quot;import&quot;: score.append(scoresDict[&quot;import&quot;]) else: print(&quot;Incorrect!&quot;) print(&quot;Your score is&quot;, sum(score)) def = questionResponse(prompt): . Incorrect! .",
             "url": "https://genechang1.github.io/fastPage1/2022/08/25/Quiz.html",
             "relUrl": "/2022/08/25/Quiz.html",
             "date": " • Aug 25, 2022"
