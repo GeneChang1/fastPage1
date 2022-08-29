@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -204,7 +204,7 @@ window.onload = wrap_img;
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; running &quot;</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You will be asked &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; questions.&quot;</span><span class="p">)</span>
-<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="p">)</span>
 
 <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">&quot;What command is used to include other functions that were previously developed?&quot;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;import&quot;</span><span class="p">:</span>
@@ -228,6 +228,104 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; you scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello, genechang running /Library/Developer/CommandLineTools/usr/bin/python3
+You will be asked 3 questions.
+Are you ready to take a test?
+Question: What command is used to include other functions that were previously developed?
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A few alternatives to making a quiz:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># scoresDict = {&quot;Vatican City&quot;:200, &quot;Okazaki&quot;:400, &quot;Gandalf&quot;:100, &quot;Asia&quot;:200}</span>
+
+<span class="c1"># answer1 = input(&quot;What is the smallest country?&quot;).capitalize()</span>
+<span class="c1"># if answer1 == &quot;Vatican City&quot;:</span>
+<span class="c1">#   score.append(scoresDict[&quot;Vatican City&quot;])</span>
+<span class="c1"># else: </span>
+<span class="c1">#   score.append(score - 100)</span>
+<span class="c1"># print(&quot;Your score is&quot;, score[0])</span>
+
+<span class="c1"># answer2 = input(&quot;What are the fragments of DNA in replication called?&quot;).capitalize()</span>
+<span class="c1"># if answer1 == &quot;Okazaki&quot;:</span>
+<span class="c1">#   score.append(score[0] + scoresDict[&quot;Okazaki&quot;])</span>
+<span class="c1">#   score.pop(0)</span>
+<span class="c1"># else: </span>
+<span class="c1">#   score.append(score[0] - 100)</span>
+<span class="c1">#   score.pop(0)</span>
+<span class="c1"># print(&quot;Your score is&quot;, score[0])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># answer = (input(&quot;What is the secret word? &quot;)).capitalize()</span>
+<span class="n">guesses</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="c1"># while guesses &gt; 0:</span>
+<span class="c1">#   answer = (input(&quot;What is the word? &quot;)).capitalize()</span>
+<span class="c1">#   if answer == secretWord:</span>
+<span class="c1">#     print (&quot;You win!&quot;)</span>
+<span class="c1">#     break</span>
+<span class="c1">#   else: </span>
+<span class="c1">#     print (&quot;You lose, try again!&quot;)</span>
+
+<span class="c1">#     guesses -= 1</span>
+<span class="c1"># else: </span>
+<span class="c1">#   print(&quot;Game over&quot;)</span>
+
+  <span class="c1"># # Store a number inside a variable (lucky number)</span>
+<span class="c1"># # Get the user&#39;s favorite number and store it</span>
+<span class="c1"># # Check if the user has the same facorite number as you</span>
+<span class="c1"># luckyNumber = 7</span>
+<span class="c1"># answer = int(input(&quot;What do you think the lucky number is?&quot;))</span>
+<span class="c1"># if answer &gt; luckyNumber:</span>
+<span class="c1">#   print(&quot;Too high!&quot;)</span>
+<span class="c1"># elif answer &lt; luckyNumber:</span>
+<span class="c1">#   print(&quot;Too low!&quot;)</span>
+<span class="c1"># else: </span>
+<span class="c1">#   print(&quot;Good job!&quot;)</span>
 </pre></div>
 
     </div>
