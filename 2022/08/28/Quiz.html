@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -153,7 +153,7 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your score is&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 
 
-<span class="k">def</span> <span class="o">=</span> <span class="n">questionResponse</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+
     
 </pre></div>
 
@@ -168,7 +168,84 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Incorrect!
+Incorrect!
+Incorrect!
+Incorrect!
+Incorrect!
+Incorrect!
+Incorrect!
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/genechang/fastPage1/_notebooks/Quiz.ipynb Cell 2</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/Quiz.ipynb#W1sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> else:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/Quiz.ipynb#W1sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span>     print(&#34;Incorrect!&#34;)
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/Quiz.ipynb#W1sZmlsZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span> answer2 = input(&#34;What command is used to evaluate correct or incorrect response in this example?&#34;)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/Quiz.ipynb#W1sZmlsZQ%3D%3D?line=11&#39;&gt;12&lt;/a&gt;</span> if answer2 == &#34;if&#34;:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/Quiz.ipynb#W1sZmlsZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span>     score.append(scoresDict[&#34;if&#34;])
+
+File <span class="ansi-green-fg">~/Library/Python/3.8/lib/python/site-packages/ipykernel/kernelbase.py:1177</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1173</span> if not self._allow_stdin:
+<span class="ansi-green-intense-fg ansi-bold">   1174</span>     raise StdinNotImplementedError(
+<span class="ansi-green-intense-fg ansi-bold">   1175</span>         &#34;raw_input was called, but this frontend does not support input requests.&#34;
+<span class="ansi-green-intense-fg ansi-bold">   1176</span>     )
+<span class="ansi-green-fg">-&gt; 1177</span> return self._input_request(
+<span class="ansi-green-intense-fg ansi-bold">   1178</span>     str(prompt),
+<span class="ansi-green-intense-fg ansi-bold">   1179</span>     self._parent_ident[&#34;shell&#34;],
+<span class="ansi-green-intense-fg ansi-bold">   1180</span>     self.get_parent(&#34;shell&#34;),
+<span class="ansi-green-intense-fg ansi-bold">   1181</span>     password=False,
+<span class="ansi-green-intense-fg ansi-bold">   1182</span> )
+
+File <span class="ansi-green-fg">~/Library/Python/3.8/lib/python/site-packages/ipykernel/kernelbase.py:1187</span>, in <span class="ansi-cyan-fg">Kernel._input_request</span><span class="ansi-blue-fg">(self, prompt, ident, parent, password)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1184</span> def _input_request(self, prompt, ident, parent, password=False):
+<span class="ansi-green-intense-fg ansi-bold">   1185</span>     # Flush output before making the request.
+<span class="ansi-green-intense-fg ansi-bold">   1186</span>     sys.stderr.flush()
+<span class="ansi-green-fg">-&gt; 1187</span>     sys.stdout.flush()
+<span class="ansi-green-intense-fg ansi-bold">   1189</span>     # flush the stdin socket, to purge stale replies
+<span class="ansi-green-intense-fg ansi-bold">   1190</span>     while True:
+
+File <span class="ansi-green-fg">~/Library/Python/3.8/lib/python/site-packages/ipykernel/iostream.py:478</span>, in <span class="ansi-cyan-fg">OutStream.flush</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    476</span> # wait for flush to actually get through, if we can.
+<span class="ansi-green-intense-fg ansi-bold">    477</span> evt = threading.Event()
+<span class="ansi-green-fg">--&gt; 478</span> self.pub_thread.schedule(evt.set)
+<span class="ansi-green-intense-fg ansi-bold">    479</span> # and give a timeout to avoid
+<span class="ansi-green-intense-fg ansi-bold">    480</span> if not evt.wait(self.flush_timeout):
+<span class="ansi-green-intense-fg ansi-bold">    481</span>     # write directly to __stderr__ instead of warning because
+<span class="ansi-green-intense-fg ansi-bold">    482</span>     # if this is happening sys.stderr may be the problem.
+
+File <span class="ansi-green-fg">~/Library/Python/3.8/lib/python/site-packages/ipykernel/iostream.py:210</span>, in <span class="ansi-cyan-fg">IOPubThread.schedule</span><span class="ansi-blue-fg">(self, f)</span>
+<span class="ansi-green-intense-fg ansi-bold">    208</span>     self._events.append(f)
+<span class="ansi-green-intense-fg ansi-bold">    209</span>     # wake event thread (message content is ignored)
+<span class="ansi-green-fg">--&gt; 210</span>     self._event_pipe.send(b&#34;&#34;)
+<span class="ansi-green-intense-fg ansi-bold">    211</span> else:
+<span class="ansi-green-intense-fg ansi-bold">    212</span>     f()
+
+File <span class="ansi-green-fg">~/Library/Python/3.8/lib/python/site-packages/zmq/sugar/socket.py:618</span>, in <span class="ansi-cyan-fg">Socket.send</span><span class="ansi-blue-fg">(self, data, flags, copy, track, routing_id, group)</span>
+<span class="ansi-green-intense-fg ansi-bold">    611</span>         data = zmq.Frame(
+<span class="ansi-green-intense-fg ansi-bold">    612</span>             data,
+<span class="ansi-green-intense-fg ansi-bold">    613</span>             track=track,
+<span class="ansi-green-intense-fg ansi-bold">    614</span>             copy=copy or None,
+<span class="ansi-green-intense-fg ansi-bold">    615</span>             copy_threshold=self.copy_threshold,
+<span class="ansi-green-intense-fg ansi-bold">    616</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    617</span>     data.group = group
+<span class="ansi-green-fg">--&gt; 618</span> return super().send(data, flags=flags, copy=copy, track=track)
+
+File <span class="ansi-green-fg">zmq/backend/cython/socket.pyx:740</span>, in <span class="ansi-cyan-fg">zmq.backend.cython.socket.Socket.send</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">zmq/backend/cython/socket.pyx:787</span>, in <span class="ansi-cyan-fg">zmq.backend.cython.socket.Socket.send</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">zmq/backend/cython/socket.pyx:244</span>, in <span class="ansi-cyan-fg">zmq.backend.cython.socket._send_copy</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/Library/Python/3.8/lib/python/site-packages/zmq/backend/cython/checkrc.pxd:13</span>, in <span class="ansi-cyan-fg">zmq.backend.cython.checkrc._check_rc</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
 </div>
 </div>
 
@@ -180,6 +257,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>(I spammed it too much -_-)</p>
 <p>You could also do as such:</p>
 
 </div>
