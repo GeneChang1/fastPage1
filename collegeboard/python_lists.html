@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      6 min read
     
 </span></p>
 
@@ -257,7 +257,6 @@ person {'name': 'Gene Chang', 'age': 16, 'score': 2147000000.0, 'langs': ['Pytho
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
 
 
-<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
@@ -267,7 +266,6 @@ person {'name': 'Gene Chang', 'age': 16, 'score': 2147000000.0, 'langs': ['Pytho
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
 <span class="p">})</span>
 
-<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Sunny"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Naidu"</span><span class="p">,</span>
@@ -277,7 +275,7 @@ person {'name': 'Gene Chang', 'age': 16, 'score': 2147000000.0, 'langs': ['Pytho
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
 <span class="p">})</span>
 
-<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
+
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Nathaniel"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Capule"</span><span class="p">,</span>
@@ -287,7 +285,7 @@ person {'name': 'Gene Chang', 'age': 16, 'score': 2147000000.0, 'langs': ['Pytho
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2008 BMW 328i"</span><span class="p">]</span>
 <span class="p">})</span>
 
-<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
+
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Toby"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Leeder"</span><span class="p">,</span>
@@ -297,7 +295,7 @@ person {'name': 'Gene Chang', 'age': 16, 'score': 2147000000.0, 'langs': ['Pytho
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
 <span class="p">})</span>
 
-<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
+
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Gene"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chang"</span><span class="p">,</span>
@@ -307,16 +305,12 @@ person {'name': 'Gene Chang', 'age': 16, 'score': 2147000000.0, 'langs': ['Pytho
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
 <span class="p">})</span>
 
-<span class="c1"># Print the data structure</span>
-
-
-<span class="c1"># print function: given a dictionary of InfoDb content</span>
 <span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> <span class="c1"># \t is a tab indent</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Cars: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>  <span class="c1"># end="" make sure no return occurs</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Owns_Cars"</span><span class="p">]))</span>  <span class="c1"># join allows printing a string list with separator</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Cars: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Owns_Cars"</span><span class="p">]))</span>  
     <span class="nb">print</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">while_loop</span><span class="p">():</span>
