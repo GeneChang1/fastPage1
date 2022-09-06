@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://genechang1.github.io/fastPage1/sitemap.xml
