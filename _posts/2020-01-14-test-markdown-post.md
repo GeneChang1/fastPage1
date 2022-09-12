@@ -102,3 +102,11 @@ key: value
 
 [^1]: This is the footnote.
 
+[Quiz](https://studio.code.org/projects/applab/eIj8jxm4XUtA7a35I2-swFWWNXZyzWoi90RlheW9Jmo) 
+
+There should be a link that opens, trust it. It's just a generic quiz :D. 
+
+
+Quiz planning: "Hey what if I made a quiz".discussed steps and helped friends plan for the quiz 
+
+Trial and error: Tried to make a platformer, didn't work. Just did a quiz with a link. 
