@@ -1,12 +1,10 @@
-# Quiz V2
-
 --- 
 ... Wow!
 toc: true
 layout: post
 description: A minimal example of using markdown with fastpages.
 categories: [markdown]
-title: An Example Markdown Post
+title: Quizquizquizquiz
 ---
 
 [Quiz](https://studio.code.org/projects/applab/eIj8jxm4XUtA7a35I2-swFWWNXZyzWoi90RlheW9Jmo) 
