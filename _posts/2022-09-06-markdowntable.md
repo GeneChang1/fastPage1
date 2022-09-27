@@ -1,15 +1,4 @@
----
-keywords: fastai
-description: Tables
-title: MarkDown Table
-toc: true
-badges: true
-comments: true
-categories: [week_2]
-image: /images/chart_preview.png
-nb_path: _notebooks/markdowntable.ipynb
-layout: notebook
----
+
 
 <!--
 #################################################

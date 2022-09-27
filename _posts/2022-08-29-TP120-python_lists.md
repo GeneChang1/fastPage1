@@ -1,15 +1,4 @@
----
-keywords: fastai
-description: An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.
-title: Lists, Dictionaries, Iteration
-toc: true
-badges: true
-comments: true
-categories: [week_2]
-image: /images/chart_preview.png
-nb_path: _notebooks/2022-08-29-TP120-python_lists.ipynb
-layout: notebook
----
+
 
 <!--
 #################################################
