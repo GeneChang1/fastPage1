@@ -295,7 +295,7 @@ layout: post
 <p>Unit 3 HW 9:</p>
 <p>Finish Classwork</p>
 <p>Print <a href="https://drive.google.com/file/d/1PY6g_-4EPTlcpSpWTRmaUotRZAlR5jK-/view?usp=sharing"><span class="underline">Unit 3 Closure Activity</span></a> and Bring to Class</p>
-<p><a href="https://drive.google.com/file/d/1115mVC-_5tyAsqI4j8SstO8fs56Ovn5_/view?usp=sharing"><span class="underline">Worked Out Solutions</span></a></p></td>
+<p><a href="q"><span class="underline">Worked Out Solutions</span></a></p></td>
 <td><p><strong>Unit 3 Closure Activity</strong></p>
 <p>Unit 3 HW 10A:</p>
 <p>Unit 3 Closure Activity</p>
