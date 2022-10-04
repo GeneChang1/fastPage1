@@ -6,8 +6,6 @@ categories: [CollegeBoard1]
 title: Wow!
 ---
 
-
-
 ![]({{ site.baseurl }}/images/wawa.png "Notes I Guess")
 
 ---
