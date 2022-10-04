@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "CollegeBoard",
-            "content": "![]({{ site.baseurl }}/images/wawa.png &quot;My scores lol&quot;) .",
+            "content": "",
             "url": "https://genechang1.github.io/fastPage1/collegeboard/:NewCategory/",
             "relUrl": "/collegeboard/:NewCategory/",
             "date": " • Oct 3, 2022"
