@@ -1,5 +1,5 @@
 ---
-toc: true
+hi
 layout: post
 description: ...wow!
 categories: [CollegeBoard1]
