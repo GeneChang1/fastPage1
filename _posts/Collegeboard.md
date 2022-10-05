@@ -6,10 +6,6 @@ categories: [CollegeBoard1]
 title: Wow!
 ---
 
-![]({{ site.baseurl }}/images/wawa.png "Notes I Guess")
-
----
-
 ## Collaboration Quiz
 > Score: 3/3
 - This quiz was particularly easy, the large idea was more abstract and subjective. Because of this, the quiz offered basic, almost common sense. The quiz offered insights into the benefits of having a dynamic and diverse team, along with the benefits of communication and cohesion between teammates. Because of this, it offered a good leeway into the actual content of the lessons ahead.
