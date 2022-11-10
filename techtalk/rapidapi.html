@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Gene’s Blog" />
 <meta property="og:image" content="https://genechang1.github.io/fastPage1/images/rapidapi.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-10-10T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-11-09T00:00:00-06:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://genechang1.github.io/fastPage1/images/rapidapi.png" />
 <meta property="twitter:title" content="Python RapidAPI" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-10T00:00:00-05:00","datePublished":"2022-10-10T00:00:00-05:00","description":"APIs can be found all over the internet. A great consolidator of many APIs is RapidAPI. In this blog we will use a site to consolidates API stats. Learning a few lines of code and you can start extracting lots of data from the internet via APIs.","headline":"Python RapidAPI","image":"https://genechang1.github.io/fastPage1/images/rapidapi.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://genechang1.github.io/fastPage1/techtalk/rapidapi"},"url":"https://genechang1.github.io/fastPage1/techtalk/rapidapi"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-09T00:00:00-06:00","datePublished":"2022-11-09T00:00:00-06:00","description":"APIs can be found all over the internet. A great consolidator of many APIs is RapidAPI. In this blog we will use a site to consolidates API stats. Learning a few lines of code and you can start extracting lots of data from the internet via APIs.","headline":"Python RapidAPI","image":"https://genechang1.github.io/fastPage1/images/rapidapi.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://genechang1.github.io/fastPage1/techtalk/rapidapi"},"url":"https://genechang1.github.io/fastPage1/techtalk/rapidapi"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastPage1/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://genechang1.github.io/fastPage1/feed.xml" title="Gene's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/fastPage1/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -75,13 +75,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Python RapidAPI</h1><p class="page-description">APIs can be found all over the internet.  A great consolidator of many APIs is <mark>RapidAPI</mark>.  In this blog we will use a site to consolidates API stats.  Learning a few lines of code and you can start extracting lots of data from the internet via APIs.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-10T00:00:00-05:00" itemprop="datePublished">
-        Oct 10, 2022
+    <h1 class="post-title p-name" itemprop="name headline">Python RapidAPI</h1><p class="page-description">APIs can be found all over the internet.  A great consolidator of many APIs is <mark>RapidAPI</mark>.  In this blog we will use a site to consolidates API stats.  Learning a few lines of code and you can start extracting lots of data from the internet via APIs.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-09T00:00:00-06:00" itemprop="datePublished">
+        Nov 9, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -149,7 +149,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://imdb8.p.rapidapi.com/auto-complete"</span>
 
 <span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"q"</span><span class="p">:</span><span class="s2">"Chris Pratt"</span><span class="p">}</span>
@@ -162,6 +162,11 @@ window.onload = wrap_img;
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nconst"</span><span class="p">:</span><span class="s2">"nm5927244"</span><span class="p">}</span>
+<span class="n">prattsearch</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
+
+<span class="n">prattImage</span> <span class="o">=</span> <span class="n">prattsearch</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"image"</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"url"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Here is the link to the image of toby you see below: "</span> <span class="o">+</span> <span class="n">tobyImage</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -176,6 +181,61 @@ window.onload = wrap_img;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{"d":[{"i":{"height":2048,"imageUrl":"https://m.media-amazon.com/images/M/MV5BZjdkYjg1NzMtOTY2YS00ZWI1LWEwZWYtOTU1YTM2ODA2ZWY5XkEyXkFqcGdeQXVyMTM1MjAxMDc3._V1_.jpg","width":1536},"id":"nm0695435","l":"Chris Pratt","rank":113,"s":"Actor, Guardians of the Galaxy (2014)"},{"id":"nm9985479","l":"Chris Pratt","rank":92249,"s":"Actor, Christopher Robin (2018)"},{"id":"nm2212645","l":"Chris Pratt","rank":168083,"s":"Actor, Motorcycle (2006)"},{"id":"nm8802752","l":"Chris Pratt","rank":431449},{"i":{"height":800,"imageUrl":"https://m.media-amazon.com/images/M/MV5BZWE4MTEyM2YtOGNhNS00NmZkLWI1NjktNzlmZDcxZjM1ODc2XkEyXkFqcGdeQXVyMTA3NzIyMDM0._V1_.jpg","width":800},"id":"nm7947770","l":"Chris Pratt","rank":535176,"s":"Music Department, Deviant Love (2019)"},{"id":"tt6667532","l":"Passengers: On the Set with Chris Pratt","q":"video","qid":"video","rank":677160,"s":"Chris Pratt, Greg Baxter","y":2017},{"i":{"height":1489,"imageUrl":"https://m.media-amazon.com/images/M/MV5BZjU2NjFhNDQtNzZkMS00NzIxLTllNTAtODEzNzBmOGJhNmZhXkEyXkFqcGdeQXVyMjQ0NzE0MQ@@._V1_.jpg","width":1169},"id":"tt5301518","l":"Jurassic World: Innovation Center Tour with Chris Pratt","q":"video","qid":"video","rank":502130,"s":"Chris Pratt, Colin Trevorrow","y":2015},{"id":"nm9972450","l":"Chris Pratt","rank":1173487,"s":"Costume Department, Auto (2017)"}],"q":"chris%20pratt","v":1}
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">JSONDecodeError</span>                           Traceback (most recent call last)
+File <span class="ansi-green-fg">~/Library/Python/3.8/lib/python/site-packages/requests/models.py:971</span>, in <span class="ansi-cyan-fg">Response.json</span><span class="ansi-blue-fg">(self, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    970</span> try:
+<span class="ansi-green-fg">--&gt; 971</span>     return complexjson.loads(self.text, **kwargs)
+<span class="ansi-green-intense-fg ansi-bold">    972</span> except JSONDecodeError as e:
+<span class="ansi-green-intense-fg ansi-bold">    973</span>     # Catch JSON-related errors and raise as requests.JSONDecodeError
+<span class="ansi-green-intense-fg ansi-bold">    974</span>     # This aliases json.JSONDecodeError and simplejson.JSONDecodeError
+
+File <span class="ansi-green-fg">/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py:357</span>, in <span class="ansi-cyan-fg">loads</span><span class="ansi-blue-fg">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    354</span> if (cls is None and object_hook is None and
+<span class="ansi-green-intense-fg ansi-bold">    355</span>         parse_int is None and parse_float is None and
+<span class="ansi-green-intense-fg ansi-bold">    356</span>         parse_constant is None and object_pairs_hook is None and not kw):
+<span class="ansi-green-fg">--&gt; 357</span>     return _default_decoder.decode(s)
+<span class="ansi-green-intense-fg ansi-bold">    358</span> if cls is None:
+
+File <span class="ansi-green-fg">/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py:337</span>, in <span class="ansi-cyan-fg">JSONDecoder.decode</span><span class="ansi-blue-fg">(self, s, _w)</span>
+<span class="ansi-green-intense-fg ansi-bold">    333</span> """Return the Python representation of ``s`` (a ``str`` instance
+<span class="ansi-green-intense-fg ansi-bold">    334</span> containing a JSON document).
+<span class="ansi-green-intense-fg ansi-bold">    335</span> 
+<span class="ansi-green-intense-fg ansi-bold">    336</span> """
+<span class="ansi-green-fg">--&gt; 337</span> obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+<span class="ansi-green-intense-fg ansi-bold">    338</span> end = _w(s, end).end()
+
+File <span class="ansi-green-fg">/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py:355</span>, in <span class="ansi-cyan-fg">JSONDecoder.raw_decode</span><span class="ansi-blue-fg">(self, s, idx)</span>
+<span class="ansi-green-intense-fg ansi-bold">    354</span> except StopIteration as err:
+<span class="ansi-green-fg">--&gt; 355</span>     raise JSONDecodeError("Expecting value", s, err.value) from None
+<span class="ansi-green-intense-fg ansi-bold">    356</span> return obj, end
+
+<span class="ansi-red-fg">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">JSONDecodeError</span>                           Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/genechang/fastPage1/_notebooks/helpme.ipynb Cell 2</span> in <span class="ansi-cyan-fg">&lt;cell line: 18&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/helpme.ipynb#W1sZmlsZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span> querystring = {"nconst":"nm5927244"}
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/helpme.ipynb#W1sZmlsZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span> prattsearch = requests.request("GET", url, headers=headers, params=querystring)
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/helpme.ipynb#W1sZmlsZQ%3D%3D?line=17'&gt;18&lt;/a&gt;</span> tobyImage = prattsearch.json().get("image").get("url")
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/genechang/fastPage1/_notebooks/helpme.ipynb#W1sZmlsZQ%3D%3D?line=18'&gt;19&lt;/a&gt;</span> print("Here is the link to the image of toby you see below: " + tobyImage)
+
+File <span class="ansi-green-fg">~/Library/Python/3.8/lib/python/site-packages/requests/models.py:975</span>, in <span class="ansi-cyan-fg">Response.json</span><span class="ansi-blue-fg">(self, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    971</span>     return complexjson.loads(self.text, **kwargs)
+<span class="ansi-green-intense-fg ansi-bold">    972</span> except JSONDecodeError as e:
+<span class="ansi-green-intense-fg ansi-bold">    973</span>     # Catch JSON-related errors and raise as requests.JSONDecodeError
+<span class="ansi-green-intense-fg ansi-bold">    974</span>     # This aliases json.JSONDecodeError and simplejson.JSONDecodeError
+<span class="ansi-green-fg">--&gt; 975</span>     raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+
+<span class="ansi-red-fg">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)</pre>
 </div>
 </div>
 
