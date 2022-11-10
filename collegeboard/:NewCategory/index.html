@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -233,6 +233,69 @@ Question 17</li>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">jsonify</span>  
+<span class="kn">from</span> <span class="nn">flask_restful</span> <span class="kn">import</span> <span class="n">Api</span><span class="p">,</span> <span class="n">Resource</span> 
+<span class="kn">import</span> <span class="nn">requests</span>   
+
+<span class="c1"># Blueprints allow this code to be procedurally abstracted from main.py, meaning code is not all in one place</span>
+<span class="n">app_api2</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">'api'</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">,</span>
+                   <span class="n">url_prefix</span><span class="o">=</span><span class="s1">'/api/chess'</span><span class="p">)</span>  <span class="c1"># endpoint prefix avoid redundantly typing /api/jokes over and over</span>
+
+<span class="c1"># API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">Api</span><span class="p">(</span><span class="n">app_api2</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"turn"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">"moves"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"move1"</span><span class="p">,</span> <span class="s2">"move2"</span><span class="p">]</span>
+    <span class="p">}</span>
+    
+<span class="k">class</span> <span class="nc">ChessAPI</span><span class="p">:</span>
+    <span class="k">class</span> <span class="nc">_GetAll</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">class</span> <span class="nc">_putTurn</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">"turn"</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">class</span> <span class="nc">_putMove1</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move1</span><span class="p">):</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">"moves"</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">move1</span>
+            <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">class</span> <span class="nc">_putMove2</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move2</span><span class="p">):</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">"moves"</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">move2</span>
+            <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+             
+
+
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_GetAll</span><span class="p">,</span> <span class="s1">'/'</span><span class="p">)</span>
+
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_putTurn</span><span class="p">,</span> <span class="s1">'/turn/'</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_putMove1</span><span class="p">,</span> <span class="s1">'/move1/&lt;string:move1&gt;'</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_putMove2</span><span class="p">,</span> <span class="s1">'/move2/&lt;string:move2&gt;'</span><span class="p">)</span>
+        
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span> 
+    <span class="c1">#server = "http://127.0.0.1:5000" #local</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="s1">'https://tngc.nighthawkcodescrums.gq'</span> <span class="c1">#web</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">server</span> <span class="o">+</span> <span class="s2">"/api/chess"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
